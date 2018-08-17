@@ -16,5 +16,14 @@ class Index extends \Magento\Framework\View\Element\Template {
     {
         return parent::_prepareLayout();
     }
+    public function setTitle($title)
+	{
+		return $this->title = $title;
+	}
+
+	public function getTitle()
+	{
+		return $this->title;
+	}
 
 }

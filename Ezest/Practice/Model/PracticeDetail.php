@@ -45,40 +45,31 @@ class PracticeDetail implements PracticeInterface
      * @return jsonobject $data 
      */
     public function savePractice($pct) {
+
         $responseArray = array();
         try{
         $this->_practiceModel->setData($pct);
         $this->_practiceModel->save();
-        $responseArray['practice_details'] = $this->getPracticeDetails($this->_practiceModel->getId());   
-        $responseArray['messages'] = $this->_practiceHelper->getSuccessMessage(4000);
+        $responseArray[]['practice_details'] = $this->getPracticeDetails($this->_practiceModel->getId());   
+        $responseArray[]['messages'] = $this->_practiceHelper->getSuccessMessage(4000);
         }catch(\Exception $e){
-            $responseArray['messages'] = $this->_practiceHelper->getMessage('', '0', array(), $e->getMessage());
+            $responseArray[]['messages'] = $this->_practiceHelper->getMessage('', '0', array(), $e->getMessage());
         }
         return $responseArray;
-    }
-    /**
-     * Returns greeting message to user
-     *
-     * @api
-     * @param string[] the array of string to save
-     * @return jsonobject $data 
-     */
-    public function updatePractice($pcts) {
-        //$load = $this->_practiceModel->getCollection();
-        //return $load->getData();
-        //print_r($pcts); exit;
     }
      /**
      * Returns greeting message to user
      *
      * @api
-     * @param string[] the array of string to save
+     * @param int $id
+     * @param string $pct
      * @return jsonobject $data 
      */
-    public function addPractice($pctss) {
+    public function updatePractice($id,$pct) {
         //$load = $this->_practiceModel->getCollection();
         //return $load->getData();
-        $this->_practiceModel->setData($pctss);
-        print_r($pctss); exit;
+        //print_r($pcts); exit;
     }
+    
+
 }

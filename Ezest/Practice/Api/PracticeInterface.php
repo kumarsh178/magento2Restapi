@@ -16,8 +16,8 @@ interface PracticeInterface
      * Returns greeting message to user
      *
      * @api
-     * @param.
-     * @return string  
+     * @param
+     * @return string the total list in json format 
      */
     public function getPracticeList();
      /** 
@@ -25,23 +25,7 @@ interface PracticeInterface
      *
      * @api
      * @param string[] the array of string to save
-     * @return string  
+     * @return string  the message
      */
     public function savePractice($pct);
-    /** 
-     * Returns greeting message to user
-     *
-     * @api
-     * @param string[] the array of string to save
-     * @return string  
-     */
-    public function updatePractice($pcts);
-    /** 
-     * Returns greeting message to user
-     *
-     * @api
-     * @param string[] the array of string to save
-     * @return string  
-     */
-    public function addPractice($pctss);
 }

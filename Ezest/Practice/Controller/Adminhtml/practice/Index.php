@@ -40,5 +40,12 @@ class Index extends \Magento\Backend\App\Action
 
         return $resultPage;
     }
+     /**
+     * @return bool
+     */
+    protected function _isAllowed()
+    { 
+        return $this->_authorization->isAllowed('Ezest_Practice::manage');
+    }
 }
 ?>

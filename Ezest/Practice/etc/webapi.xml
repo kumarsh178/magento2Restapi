@@ -18,8 +18,8 @@
             <resource ref="anonymous"/>
         </resources>
     </route>
-    <route url="/V1/practice/add" method="POST">
-        <service class="Ezest\Practice\Api\PracticeInterface" method="addPractice"/>
+    <route url="/V1/practice/update/:id" method="PUT">
+        <service class="Ezest\Practice\Api\PracticeInterface" method="updatePractice"/>
         <resources>
             <resource ref="anonymous"/>
         </resources>

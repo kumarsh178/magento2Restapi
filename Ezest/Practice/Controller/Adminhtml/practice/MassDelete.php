@@ -31,4 +31,11 @@ class MassDelete extends \Magento\Backend\App\Action
         }
         return $this->resultRedirectFactory->create()->setPath('practice/*/index');
     }
+     /**
+     * {@inheritdoc}
+     */
+    protected function _isAllowed()
+    {
+        return  $this->_authorization->isAllowed('Ezest_Practice::delete');
+    }
 }
