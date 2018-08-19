@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="practice" translate="label" sortOrder="10">
+            <label>Practice Section</label>
+        </tab>
+        <section id="practice_section" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Practice Section</label>
+            <tab>practice</tab>
+            <resource>Ezest_Practice::config_practice</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General Configuration</label>
+                <field id="enable" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Module Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="display_text" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Display Text</label>
+                    <comment>This text will display on the frontend.</comment>
+                </field>
+            </group>
+        </section>
+        <tab id="practice2" translate="label" sortOrder="10">
+            <label>Practice2 Tab</label>
+        </tab>
+        <section id="practice_section2" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+        	<class>seperator_top</class>
+        	<label>Practice2 section</label>
+        	<tab>practice2</tab>
+        	<resource>Ezest_Practice::config_practice</resource>
+        	<group id="general" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1"> 
+	        	<label>General Configuration</label>
+	        	<field id="display_text2" translate="label" type="text" sortOrder="1" showInStore="1" showInDefault="1" showInWebsite="1">
+	        		<label>Title</label>
+	        	</field>
+        	</group>
+        </section>
+    </system>
+</config>
