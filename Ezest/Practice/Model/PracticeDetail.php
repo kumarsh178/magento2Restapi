@@ -50,7 +50,8 @@ class PracticeDetail implements PracticeInterface
         try{
         $this->_practiceModel->setData($pct);
         $this->_practiceModel->save();
-        $responseArray[]['practice_details'] = $this->getPracticeDetails($this->_practiceModel->getId());   
+        $responseArray[]['practice_details'] = $this->getPracticeDetails($this->_practiceModel->getId());  
+        $this->_practiceHelper->sendCustomEmail($this->_practiceModel->getId()); 
         $responseArray[]['messages'] = $this->_practiceHelper->getSuccessMessage(4000);
         }catch(\Exception $e){
             $responseArray[]['messages'] = $this->_practiceHelper->getMessage('', '0', array(), $e->getMessage());
