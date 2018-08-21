@@ -2,7 +2,7 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Cron:etc/crontab.xsd">
 	<group id="default">
 		<job instance="Ezest\Practice\Cron\Test" method="execute" name="ezestpractice_helloworld_cron">
-			<schedule>0 * * * *</schedule>
+			<schedule>* * * * *</schedule>
 		</job>
 	</group>
 </config>

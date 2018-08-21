@@ -14,7 +14,7 @@ class SendMail extends \Magento\Framework\App\Action\Action
 
 	public function execute(){
 		$textDisplay = new \Magento\Framework\DataObject(array('text'=>'heloo ezest practice'));
-		echo get_class($this->_eventManager); exit;
+		//echo get_class($this->_eventManager); exit;
 		$this->_eventManager->dispatch('ezest_practice_display_text',['mp_text'=>$textDisplay]);
 		echo $textDisplay->getText(); exit;
 		/* try{
