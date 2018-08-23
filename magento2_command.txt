@@ -1,0 +1,56 @@
+1. To get admin url without access env.php
+Ans. php bin/magento info:adminuri
+O/P => Admin Uri : /admin
+
+2.To enable and disable mentanance mode via command line:
+php bin/magento maintenance:enable 
+php bin/magento maintenance:disable 
+
+3. Allow IPs to access to the store
+php bin/magento maintenance:allow-ips
+ex : php bin/magento maintenance:allow-ips 168.168.168.168
+Set exempt IP-addresses: 168.168.168.168
+
+4. How to set Magento Developer mode or Product Mode
+Show current Magento 2 mode
+php bin/magento deploy:mode:show
+php bin/magento deploy:mode:set developer
+
+5. How to check status of cache type(s)
+php bin/magento cache:status
+
+How to Clean cache type(s)
+php bin/magento cache:clean
+
+How to flush cache type(s)
+php bin/magento cache:flush
+
+How to check enable, disable cache type(s)
+php bin/magento cache:enable
+php bin/magento cache:disable
+ex. magento cache:disable full_page
+
+6. Indexer command line
+php bin/magento indexer:info
+
+How to Reindexe Data all
+php bin/magento indexer:reindex
+
+Reindex via specifix indexer:
+php bin/magento indexer:reindex indexer_type
+
+How to Reset indexer status to invalid
+php bin/magento indexer:reset
+Index show mode :
+php bin/magento indexer:show-mode
+
+How to Set index mode type
+php bin/magento indexer:set-mode {realtime|schedule} [indexer]
+
+eg. 
+magento indexer:set-mode schedule catalog_category_product catalog_product_category
+
+7. Deploy command line
+php bin/magento setup:static-content:deploy <lang> ... <lang> [--dry-run] 
+How to run deploy static content
+php bin/magento setup:static-content:deploy

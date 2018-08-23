@@ -2,3 +2,5 @@ https://swiftotter.com/technical/certifications/magento-2-certified-developer-pr
 http://ka.lpe.sh/2018/08/13/magento-2-certified-professional-developer-exam-experience/#comment-75220
 https://www.mageplaza.com/devdocs/magento-2-create-cron-job/
 https://www.bigbridge.nl/blog/essential-magento-2-partial-reindexing/
+https://amasty.com/knowledge-base/magento-2-reindex
+https://amasty.com/blog/configure-magento-cron-job/
