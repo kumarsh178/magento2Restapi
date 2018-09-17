@@ -2,20 +2,21 @@
 namespace Ezest\Practice\Model\Indexer;
 class Test implements \Magento\Framework\Indexer\ActionInterface, \Magento\Framework\Mview\ActionInterface
 {
-	 public function __construct(\Ezest\Practice\Model\Practice $practiceModel,\Ezest\Practice\Helper\Data $practiceHelper)
-    {
-        $this->_practiceModel = $practiceModel;
-        $this->_practiceHelper = $practiceHelper;
+	protected $_logger;
+
+    public function __construct(\Psr\Log\LoggerInterface $logger){
+    	$this->_logger = $logger;
     }
+
 	/*
 	 * Used by mview, allows process indexer in the "Update on schedule" mode
 	 */
 	public function execute($ids){
-
-		$writer = new \Zend\Log\Writer\Stream(BP . '/var/log/cron.log');
+		$writer = new \Zend\Log\Writer\Stream(BP . '/var/log/practice_indexer.log');
 		$logger = new \Zend\Log\Logger();
 		$logger->addWriter($writer);
-		$logger->info(__METHOD__);
+		$logger->info('execute method run'.$ids);
+
 	}
 
 	/*
@@ -23,10 +24,11 @@ class Test implements \Magento\Framework\Indexer\ActionInterface, \Magento\Frame
 	 * Will run when reindex via command line
 	 */
 	public function executeFull(){
-		$writer = new \Zend\Log\Writer\Stream(BP . '/var/log/cron.log');
+		$writer = new \Zend\Log\Writer\Stream(BP . '/var/log/practice_indexer.log');
 		$logger = new \Zend\Log\Logger();
 		$logger->addWriter($writer);
-		$logger->info(__METHOD__);
+		$logger->info('executeFull method run');
+
 	}
    
    
@@ -34,19 +36,20 @@ class Test implements \Magento\Framework\Indexer\ActionInterface, \Magento\Frame
 	 * Works with a set of entity changed (may be massaction)
 	 */
 	public function executeList(array $ids){
-		$writer = new \Zend\Log\Writer\Stream(BP . '/var/log/cron.log');
+	$writer = new \Zend\Log\Writer\Stream(BP . '/var/log/practice_indexer.log');
 		$logger = new \Zend\Log\Logger();
 		$logger->addWriter($writer);
-		$logger->info(__METHOD__);
+		$logger->info('executeList method run'.$ids);
+	}
    
    
 	/*
 	 * Works in runtime for a single entity using plugins
 	 */
 	public function executeRow($id){
-		$writer = new \Zend\Log\Writer\Stream(BP . '/var/log/cron.log');
+		$writer = new \Zend\Log\Writer\Stream(BP . '/var/log/practice_indexer.log');
 		$logger = new \Zend\Log\Logger();
 		$logger->addWriter($writer);
-		$logger->info(__METHOD__);
+		$logger->info('executeList method run'.$id);
 	}
 }

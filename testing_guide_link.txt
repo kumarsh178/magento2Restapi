@@ -4,3 +4,6 @@ https://www.mageplaza.com/devdocs/magento-2-create-cron-job/
 https://www.bigbridge.nl/blog/essential-magento-2-partial-reindexing/
 https://amasty.com/knowledge-base/magento-2-reindex
 https://amasty.com/blog/configure-magento-cron-job/
+
+//to create model
+https://www.mageplaza.com/magento-2-module-development/how-to-create-crud-model-magento-2.html

@@ -12,6 +12,11 @@ class Index extends \Magento\Framework\App\Action\Action
 	}
     public function execute()
     {
-    	 return $this->_pageFactory->create();
+    	$resultPage = $this->_pageFactory->create();
+	 	$block = $resultPage->getLayout()->getBlock('customer.account.link.back');
+        if ($block) {
+            $block->setRefererUrl($this->_redirect->getRefererUrl());
+        }
+    	 return $resultPage;
     }
 }

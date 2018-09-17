@@ -1,0 +1,11 @@
+.download_link{
+	clear:both;
+	float:right;
+}
+.download_link .download_button{
+	cursor: pointer;
+}
+#chartContainer{
+	height: 300px; 
+	width: 100%;
+}

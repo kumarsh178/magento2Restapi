@@ -8,11 +8,13 @@ class Data extends AbstractHelper
 	protected $_inlineTranslation;
 	protected $_transportBuilder;
 	protected $_practiceModel;
-	public function __construct(\Magento\Store\Model\StoreManagerInterface $storeManager,\Magento\Framework\Translate\Inline\StateInterface $inlineTranslation,\Magento\Framework\Mail\Template\TransportBuilder $transportBuilder,\Ezest\Practice\Model\Practice $practiceModel){
+	protected $_practiceFactory;
+	public function __construct(\Magento\Store\Model\StoreManagerInterface $storeManager,\Magento\Framework\Translate\Inline\StateInterface $inlineTranslation,\Magento\Framework\Mail\Template\TransportBuilder $transportBuilder,\Ezest\Practice\Model\Practice $practiceModel,\Ezest\Practice\Model\PracticeFactory $practicefactory){
 		$this->_storeManager = $storeManager;
 		$this->_inlineTranslation = $inlineTranslation;
 		$this->_transportBuilder = $transportBuilder;
 		$this->_practiceModel = $practiceModel;
+		$this->_practiceFactory = $practicefactory;
 	}
 	private $_messages=array(
 		'success'=>array(
@@ -90,5 +92,9 @@ class Data extends AbstractHelper
 	                ->getTransport();
 	$transport->sendMessage();
 	$this->_inlineTranslation->resume();
+	}
+	public function getLocations(){
+		$collection = $this->_practiceFactory->create()->getCollection()->addFieldToSelect('location')->getData();
+		return array_unique(array_column($collection, 'location'));
 	}
 }

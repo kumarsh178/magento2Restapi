@@ -1,0 +1,45 @@
+<?php $data = $this->readCsv();
+	$csvData = json_encode($data);
+ ?>
+<div id="chartContainer"></div>
+<p class="download_link"><a class="download_button" download="myImage.jpg"  onclick="download_img(this)">Download Chart</a></p>
+<script>
+require([
+    'jquery',
+    'Ezest_Saleschart/chart/canvas'
+], function ($,CanvasJS) {
+			window.onload = function () {
+				var data = '<?php echo $csvData; ?>';
+				var datpars = JSON.parse(data);
+				var i=1;
+				for(i in datpars){
+					datpars[i].x = new Date(datpars[i].x);
+				} 
+		    var chart = new CanvasJS.Chart("chartContainer",
+		    {
+		      title:{
+		        text: "Sample Sales Prediction chart"
+		    },
+		    axisX:{
+		        title: "Product Sold Date ",
+		        gridThickness: 2
+		    },
+		    axisY: {
+		        title: "Amount of Sold Product"
+		    },
+		    data: [
+		    {        
+		        type: "line",
+		        dataPoints: datpars
+		    }
+		    ]
+		});
+		    chart.render();
+		}
+		download_img = function(el) {
+		var canvas = document.getElementsByClassName("canvasjs-chart-canvas");
+		  var image = canvas[0].toDataURL("image/jpg");
+		  el.href = image;
+		};
+    });
+</script>

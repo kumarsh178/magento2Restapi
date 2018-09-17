@@ -1,8 +1,8 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
-    <update handle="customer_account"/>
+    <!-- <update handle="styles"/> -->
     <body>
-        <referenceContainer name="content">
-            <block class="Ezest\Practice\Block\Widget\Post" name="practice_index_index"/>
-        </referenceContainer>
+       <referenceContainer name="content">
+       		<uiComponent name="customchart_post_index_listing"></uiComponent>
+       </referenceContainer>
     </body>
 </page>
