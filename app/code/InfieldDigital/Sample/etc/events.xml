@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+
+    <event name="checkout_onepage_controller_success_action">
+        <observer name="redirect_after_checkout_to_aem" instance="InfieldDigital\Sample\Observer\AemRedirect"/>
+    </event>
+
+    <!--This is used to destroy a quote - could be used to notify AEM that the session / cart needs to be cleared? -->
+    <!--<event name="checkout_quote_destroy">-->
+        <!--<observer name="redirect_after_checkout_to_aem" instance="InfieldDigital\Demo\Observer\AemRedirect"/>-->
+    <!--</event>-->
+
+</config>

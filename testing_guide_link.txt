@@ -7,3 +7,9 @@ https://amasty.com/blog/configure-magento-cron-job/
 
 //to create model
 https://www.mageplaza.com/magento-2-module-development/how-to-create-crud-model-magento-2.html
+
+//data and shchema version d/f 
+https://magento.stackexchange.com/questions/120884/when-schema-version-data-version-will-be-different
+
+//for creating customer attribute and customer address
+https://www.siphor.com/add-customer-and-customer-address-attributes-in-magento-2/

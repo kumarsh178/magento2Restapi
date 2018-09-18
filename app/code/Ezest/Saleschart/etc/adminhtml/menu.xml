@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Ezest_Saleschart::manager" title="Sales Chart" module="Ezest_Saleschart" sortOrder="10" resource="Ezest_Saleschart::manager"/>
+        <add id="Ezest_Saleschart::chart" title="View Chart" module="Ezest_Saleschart" sortOrder="0" parent="Ezest_Saleschart::manager"
+                action="saleschart/chart/view" resource="Ezest_Saleschart::chart"/>
+    </menu>
+</config>
