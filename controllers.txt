@@ -1,0 +1,31 @@
+\Magento\Framework\Controller\Result\Forward
+$result = $this->resultForwardFactory->create();
+$result->forward('noroute');  
+retutn $result;
+
+Use to forward controller.
+
+++++++++++++++++++++++------------------
+\Magento\Framework\Controller\Result\Redirect
+$result = $this->resultRedirectFactory->create();
+$result->setPath('*/*/index');
+return $result;
+
+used to redirect controller
+
++++++++++++-----------------++++++++++++++
+\Magento\Framework\Controller\Result\Raw
+$result = $this->rawResultFactory->create();
+$result->setHeader('Content-Type', 'text/xml');
+$result->setContents('<root><block></block></root>);
+return $result;
+
+used to return raw string
+
++++++++++++++++++++---------------------
+\Magento\Framework\Controller\Result\Json
+$result = $this->jsonResultFactory();
+   $class = new Class;              
+   $class->data = value;
+   $result->setData($class);
+   return $result; 

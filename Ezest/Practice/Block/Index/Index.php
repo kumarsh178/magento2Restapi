@@ -5,16 +5,10 @@ namespace Ezest\Practice\Block\Index;
 
 class Index extends \Magento\Framework\View\Element\Template {
 
-    public function __construct(\Magento\Catalog\Block\Product\Context $context, array $data = []) {
+    public function __construct(\Magento\Framework\View\Element\Template\Context $context, array $data = []) {
 
         parent::__construct($context, $data);
 
-    }
-
-
-    public function _prepareLayout()
-    {
-        return parent::_prepareLayout();
     }
     public function setTitle($title)
 	{
@@ -23,7 +17,12 @@ class Index extends \Magento\Framework\View\Element\Template {
 
 	public function getTitle()
 	{
-		return $this->title;
+        echo '<pre>';
+        print_r($this->getSecond());
+		return $this->getFirst();
 	}
-
+    protected function _afterToHtml($html)
+    {
+        return $html . '<div>Killroy was here</div>';
+    }
 }

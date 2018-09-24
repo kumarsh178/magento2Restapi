@@ -13,3 +13,8 @@ https://magento.stackexchange.com/questions/120884/when-schema-version-data-vers
 
 //for creating customer attribute and customer address
 https://www.siphor.com/add-customer-and-customer-address-attributes-in-magento-2/
+
++++++++++for request flow processing++++++++
+http://www.dckap.com/blog/request-flow-in-magento-2/
++++------------+++++ router knowledge+++++++++--------
+https://belvg.com/blog/controllers-routers-and-responses-in-magento-2.html
