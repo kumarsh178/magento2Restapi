@@ -35,4 +35,8 @@ class DataProvider extends \Magento\Ui\DataProvider\AbstractDataProvider
     {
         return [];
     }
+    public function addFilter(\Magento\Framework\Api\Filter $filter)
+    {
+        return null;
+    }
 }
