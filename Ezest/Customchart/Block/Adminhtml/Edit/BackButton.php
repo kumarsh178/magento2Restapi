@@ -1,6 +1,6 @@
 <?php
 namespace Ezest\Customchart\Block\Adminhtml\Edit;
-class BackButton implements \Magento\Framework\View\Element\UiComponent\Control\ButtonProviderInterface
+class BackButton extends GenericButton implements \Magento\Framework\View\Element\UiComponent\Control\ButtonProviderInterface
 {
 	 /**
      * @return array

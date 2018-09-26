@@ -1,15 +1,15 @@
 <?php 
 namespace Ezest\Customchart\Block\Adminhtml\Edit;
 use \Magento\Framework\View\Element\UiComponent\Control\ButtonProviderInterface;
-class SaveAndContinueButton implements ButtonProviderInterface
+class SaveAndContinueButton extends GenericButton implements ButtonProviderInterface
 {
 	public function __construct( \Magento\Backend\Block\Widget\Context $context,
         \Magento\Framework\Registry $registry){
 
-		 //parent::__construct($context, $registry);
+		 parent::__construct($context, $registry);
 	}
 	public function getButtonData(){
-            $data = [
+           return [
                 'label' => __('Save and Continue Edit'),
                 'class' => 'save',
                 'data_attribute' => [
@@ -19,6 +19,5 @@ class SaveAndContinueButton implements ButtonProviderInterface
                 ],
                 'sort_order' => 80,
             ];
-        return $data;
 	}
 }

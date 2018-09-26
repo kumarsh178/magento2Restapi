@@ -32,6 +32,19 @@
                         </item>
                     </argument>
                 </action>
+               <action name="save">
+                    <argument name="data" xsi:type="array">
+                        <item name="config" xsi:type="array">
+                            <item name="type" xsi:type="string">save</item>
+                            <item name="label" xsi:type="string" translate="true">Save</item>
+                            <item name="url" xsi:type="url" path="customchart/post/save"/>
+                            <item name="confirm" xsi:type="array">
+                                <item name="title" xsi:type="string" translate="true">Save Post</item>
+                                <item name="message" xsi:type="string" translate="true">Are you sure you wan't to delete selected items?</item>
+                            </item>
+                        </item>
+                    </argument>
+                </action>
             </massaction>
             <!-- ... For Pagination -->  
             <paging name="listing_paging"/>

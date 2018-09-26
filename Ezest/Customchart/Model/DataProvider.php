@@ -14,6 +14,12 @@ class DataProvider extends \Magento\Ui\DataProvider\AbstractDataProvider
      * @param array $data
      */
     private $_collection;
+
+    protected $_loadedData;
+   
+    /**
+     * @var array
+     */
     public function __construct(
         $name,
         $primaryFieldName,
@@ -33,7 +39,14 @@ class DataProvider extends \Magento\Ui\DataProvider\AbstractDataProvider
      */
     public function getData()
     {
-        return [];
+       if (isset($this->_loadedData)) {
+            return $this->_loadedData;
+        }
+        $items = $this->_collection->getItems();
+        foreach ($items as $employee) {
+            $this->_loadedData[$employee->getPostId()] = $employee->getData();
+        }
+        return $this->_loadedData;
     }
     public function addFilter(\Magento\Framework\Api\Filter $filter)
     {

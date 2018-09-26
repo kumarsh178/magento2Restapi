@@ -1,10 +1,17 @@
 <?php
 namespace Ezest\Customchart\Block\Adminhtml\Edit;
-class DeleteButton implements \Magento\Framework\View\Element\UiComponent\Control\ButtonProviderInterface
+class DeleteButton extends GenericButton implements \Magento\Framework\View\Element\UiComponent\Control\ButtonProviderInterface
 {
+    private $_request;
 	 /**
      * @return array
      */
+     public function __construct( \Magento\Backend\Block\Widget\Context $context,
+        \Magento\Framework\Registry $registry,\Magento\Framework\App\RequestInterface $request){
+
+         parent::__construct($context, $registry);
+         $this->_request = $request;
+    }
     public function getButtonData()
     {
             $data = [
@@ -25,7 +32,7 @@ class DeleteButton implements \Magento\Framework\View\Element\UiComponent\Contro
      */
     public function getDeleteUrl()
     {
-        return ('*/*/delete/id/1');
+        return $this->urlBuilder->getUrl('customchart/post/delete/')
     }
 }
 ?>
