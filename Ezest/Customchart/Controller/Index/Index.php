@@ -20,13 +20,14 @@ class Index extends \Magento\Framework\App\Action\Action
 		$post = $this->_postFactory->create();
 		$collection = $post->getCollection();
 		$resultPage = $this->_pageFactory->create();
+		/*echo 'helooo'; exit;
 		echo 'Module data';
 		foreach($collection as $item){
 			echo "<pre>";
 			print_r($item->getData());
 			echo "</pre>";
 		}
-		exit();
+		exit();*/
 		return $resultPage;
 	}
 }

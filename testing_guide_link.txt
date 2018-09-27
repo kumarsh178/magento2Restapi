@@ -18,3 +18,13 @@ https://www.siphor.com/add-customer-and-customer-address-attributes-in-magento-2
 http://www.dckap.com/blog/request-flow-in-magento-2/
 +++------------+++++ router knowledge+++++++++--------
 https://belvg.com/blog/controllers-routers-and-responses-in-magento-2.html
+
+namespace Vendor\CustomModule\ViewModel;
+
+class Class implements \Magento\Framework\View\Element\Block\ArgumentInterface
+{
+    public function __construct()
+    {
+
+    }
+}

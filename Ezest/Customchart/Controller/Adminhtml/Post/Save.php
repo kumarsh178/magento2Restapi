@@ -18,7 +18,7 @@ class Save extends \Magento\Backend\App\Action
 			$model = $this->_postFactory->create();
 			$id = $this->getRequest()->getParam('id');
 			if(!empty($id)){
-				$model->load($id);
+				 $model->load($id);
 				 $model->setCreatedAt(date('Y-m-d H:i:s'));
 			}
 				$model->setData($data);

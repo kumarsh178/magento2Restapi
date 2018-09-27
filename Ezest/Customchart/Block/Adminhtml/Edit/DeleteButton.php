@@ -7,7 +7,7 @@ class DeleteButton extends GenericButton implements \Magento\Framework\View\Elem
      * @return array
      */
      public function __construct( \Magento\Backend\Block\Widget\Context $context,
-        \Magento\Framework\Registry $registry,\Magento\Framework\App\RequestInterface $request){
+        \Magento\Framework\Registry $registry,\Magento\Framework\App\Request\Http $request){
 
          parent::__construct($context, $registry);
          $this->_request = $request;
@@ -15,13 +15,8 @@ class DeleteButton extends GenericButton implements \Magento\Framework\View\Elem
     public function getButtonData()
     {
             $data = [
-                'label' => __('Delete Customer'),
-                'class' => 'delete',
-                'id' => 'customer-edit-delete-button',
-                'data_attribute' => [
-                    'url' => $this->getDeleteUrl()
-                ],
-                'on_click' => '',
+                'label' => __('Delete POST'),
+                'on_click' => "location.href="."'".$this->getDeleteUrl()."'",
                 'sort_order' => 20,
             ];
         return $data;
@@ -32,7 +27,7 @@ class DeleteButton extends GenericButton implements \Magento\Framework\View\Elem
      */
     public function getDeleteUrl()
     {
-        return $this->urlBuilder->getUrl('customchart/post/delete/')
+        return $this->urlBuilder->getUrl('customchart/post/delete/',array('id'=>$this->_request->getParam('id')));
     }
 }
 ?>

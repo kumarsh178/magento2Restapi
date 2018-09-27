@@ -149,5 +149,10 @@
                 </item>
             </argument>
         </column>
+         <actionsColumn name="actions" class="Ezest\Customchart\Ui\Component\Listing\Columns\PostAction" sortOrder="200">
+            <settings>
+                <indexField>post_id</indexField>
+            </settings>
+        </actionsColumn>
 </columns>
 </listing>
