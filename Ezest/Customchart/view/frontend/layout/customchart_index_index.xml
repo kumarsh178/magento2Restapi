@@ -7,22 +7,22 @@
 			        <argument name="block_id" xsi:type="string">test-content</argument>
 			    </arguments>
 			</block>
-         </container> -->
-        <!-- <container name="test" as="test_div" htmlTag="div" after="firstDiv" htmlClass="test_div" label="Sidebar Additional">
+         </container> 
+      <container name="test" as="test_div" htmlTag="div" after="firstDiv" htmlClass="test_div" label="Sidebar Additional">
         		<block class="Ezest\Practice\Block\Widget\Post" name="practice_index_index"/>
-    	</container> -->
-        <block class="Magento\Framework\View\Element\Template"
+    	</container>-->
+       <!--  <block class="Magento\Framework\View\Element\Template"
                    name="pronko.viewmodel" template="Ezest_Customchart::viewmodel.phtml">
                   <arguments>
                     <argument name="viewModel" xsi:type="object">Ezest\Customchart\ViewModel\CustomBlock</argument>
                   </arguments>
-                </block>
-                <!-- <block class="Magento\Framework\View\Element\Template"
-                   name="pronko.viewmodel"
-                   template="Pronko_ViewModel::script.phtml">
+        </block> -->
+        <container name="test" as="test_div" htmlTag="div" after="firstDiv" htmlClass="test_div" label="Sidebar Additional">
+            <block class="Magento\Framework\View\Element\Text" name="showText">
                 <arguments>
-                    <argument name="viewModel" xsi:type="object">Pronko\ViewModel\ViewModel\CmsPagesList</argument>
+                    <argument name="text" xsi:type="string">About Us</argument>
                 </arguments>
-            </block> -->
+            </block>
+      </container>
     </referenceContainer>
 </page>
