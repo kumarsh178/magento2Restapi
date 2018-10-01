@@ -28,3 +28,6 @@ class Class implements \Magento\Framework\View\Element\Block\ArgumentInterface
 
     }
 }
++++---------------++++++
+Magento 2 Repositories, Interfaces and the Web API
+http://vinaikopp.com/2017/02/18/magento2_repositories_interfaces_and_webapi/

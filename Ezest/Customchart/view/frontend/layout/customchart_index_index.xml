@@ -17,6 +17,7 @@
                     <argument name="viewModel" xsi:type="object">Ezest\Customchart\ViewModel\CustomBlock</argument>
                   </arguments>
         </block> -->
+        <block class="Magento\Framework\View\Element\Template" template="Ezest_Customchart::index.phtml"/>
         <container name="test" as="test_div" htmlTag="div" after="firstDiv" htmlClass="test_div" label="Sidebar Additional">
             <block class="Magento\Framework\View\Element\Text" name="showText">
                 <arguments>
