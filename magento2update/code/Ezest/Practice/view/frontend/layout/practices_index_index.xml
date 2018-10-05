@@ -1,0 +1,17 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
+    <!-- <update handle="customer_account"/> -->
+    <body>
+        <referenceContainer name="content">
+            <block class="Ezest\Practice\Block\Index\Index" name="practice_index_index" template="Ezest_Practice::practice_index_index.phtml">
+            	<arguments>
+            		<argument name="first" xsi:type="string">hello testsssssssssss</argument>
+            		<argument name="second" xsi:type="array">
+            			<item name="name" xsi:type="string">Shailendra Kumar</item>
+            			<item name="email" xsi:type="string">shailendra.maddheshia@e-zest.in</item>
+            			<item name="mobile" xsi:type="number">999999999999999</item>
+            		</argument>
+            	</arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

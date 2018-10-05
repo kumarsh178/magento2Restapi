@@ -54,3 +54,4 @@ magento indexer:set-mode schedule catalog_category_product catalog_product_categ
 php bin/magento setup:static-content:deploy <lang> ... <lang> [--dry-run] 
 How to run deploy static content
 php bin/magento setup:static-content:deploy
+php bin/magento setup:static-content:deploy pt_BR

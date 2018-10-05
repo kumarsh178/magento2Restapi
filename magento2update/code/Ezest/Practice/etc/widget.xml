@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:helloworld:Magento_Widget:etc/widget.xsd">
+	<widget class="Ezest\Practice\Block\Widget\Post" id="ezest_practice_widget_post">
+		<label>Blog Posts</label>
+		<description>Posts</description>
+		<parameters>
+			<parameter name="posts" sort_order="10" visible="true" xsi:type="text">
+				<label>Custom Posts Label</label>
+			</parameter>
+			<parameter name="location" sort_order="11" visible="true" required="true" xsi:type="select" source_model="\Ezest\Practice\Model\Source\Location">
+				<label>Select specific location to show data</label>
+			</parameter>
+			<parameter name="record" sort_order="12" visible="true" required="true" xsi:type="select">
+				<label translation="true">Select number of records</label>
+				<options>
+					<option name="all" value="all" selected="true"><label>All</label></option>
+					<option name="num" value="10"><label>10</label></option>
+				</options>
+			</parameter>
+			<parameter name="blog_title" sort_order="13" visible="true" xsi:type="text"><label>Blog Title</label></parameter>
+		</parameters>
+	</widget>
+</widgets>

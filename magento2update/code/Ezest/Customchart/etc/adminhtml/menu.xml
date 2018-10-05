@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Ezest_Customchart::manager" title="Custom Chart" module="Ezest_Customchart" sortOrder="10" resource="Ezest_Saleschart::manager"/>
+        <add id="Ezest_Customchart::chart" title="Post" module="Ezest_Customchart" sortOrder="0" parent="Ezest_Customchart::manager"
+                action="customchart/post/index" resource="Ezest_Customchart::chart"/>
+    </menu>
+</config>

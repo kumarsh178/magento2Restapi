@@ -1,0 +1,5 @@
+<page_layouts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/PageLayout/etc/layouts.xsd">
+	<layout id="ezest-practice">
+		<label translate="true">Ezest layout</label>
+	</layout>
+</page_layouts>

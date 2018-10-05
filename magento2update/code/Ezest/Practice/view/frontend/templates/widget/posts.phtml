@@ -1,0 +1,15 @@
+<?php
+$collection = $this->getPracticeList();
+?>
+<table>
+	<thead><tr><th>Name</th><th>Email</th><th>Location</th><th>Dob</th></tr></thead>
+	<?php if($collection->getSize()>0){ ?>
+			<tbody>
+				<?php foreach($collection as $item){  ?>
+					<tr><td><?php echo $item->getName(); ?></td><td><?php echo $item->getEmail(); ?></td><td><?php echo $item->getLocation(); ?></td><td><?php echo $item->getDob(); ?></td></tr>
+				<?php } ?>
+			</tbody>
+<?php } else{
+	echo 'No Record Found';
+} ?>
+</table>

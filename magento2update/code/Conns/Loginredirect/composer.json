@@ -1,0 +1,22 @@
+{
+    "name": "conns/module-Loginredirect",
+    "description": "Redirect after login",
+    "type": "magento2-module",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Conns",
+            "email": "hinathakur@virtusa.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Conns\\Loginredirect\\": ""
+        },
+        "files": [
+            "registration.php"
+        ]
+    }
+}

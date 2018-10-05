@@ -1,0 +1,22 @@
+{
+    "name": "conns/module-ImageProcessor",
+    "description": "Image Modification",
+    "type": "magento2-module",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Conns",
+            "email": "hinathakur@virtusa.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Conns\\ImageProcessor\\": ""
+        },
+        "files": [
+            "registration.php"
+        ]
+    }
+}

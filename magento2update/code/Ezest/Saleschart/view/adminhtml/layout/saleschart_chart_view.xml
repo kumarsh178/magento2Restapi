@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="Ezest_Saleschart::css/chart.css"/>
+    </head>
+    <body>
+        <referenceContainer name="content">
+            <container name="chart_view" htmlClass="view_chart" htmlTag="div">
+        	<block class="Ezest\Saleschart\Block\Adminhtml\Index" name="showchart" template="Ezest_Saleschart::chart/view.phtml"></block>
+            </container>
+        </referenceContainer>
+    </body>
+</page>

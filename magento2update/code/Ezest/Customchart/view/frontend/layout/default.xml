@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+       <referenceBlock name="footer_links">
+          <block class="Magento\Framework\View\Element\Html\Link\Current" ifconfig="practice_section/general/enable"  name="custommodule-link">
+                <arguments name="first-link">
+                    <argument name="label" xsi:type="string">Custom Module</argument>
+                    <argument name="path" xsi:type="helper" helper="Ezest\Practice\Helper\Data::getPracticeUrl"/>
+                    
+                </arguments>
+          </block>
+      </referenceBlock>
+       <!-- <referenceBlock name="header.links">
+       	<block class="Magento\Framework\View\Element\Html\Link" ifconfig="practice_section/general/enable"  name="custommodule-link">
+   			<arguments>
+		       	<argument name="label" xsi:type="string">Custom Module2 Link</argument>
+		        <argument name="path" xsi:type="helper" helper="Ezest\Practice\Helper\Data::getPracticeUrl"/>
+		    </arguments>
+		</block>
+       </referenceBlock> -->
+    </body>
+</page>
