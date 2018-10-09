@@ -53,7 +53,7 @@
             <!-- ... For searching full text -->    
     <filterSearch name="fulltext"/>
     </listingToolbar>
-    <argument name="data" xsi:type="array">
+<!--     <argument name="data" xsi:type="array">
         <item name="js_config" xsi:type="array">
             <item name="provider" xsi:type="string">customchart_post_index_listing.ezest_customchart_post_listing_datasource</item>
             <item name="deps" xsi:type="string">customchart_post_index_listing.ezest_customchart_post_listing_datasource</item>
@@ -67,7 +67,7 @@
                 <item name="url" xsi:type="string">*/*/create</item>
             </item>
         </item>
-    </argument>
+    </argument> -->
 <!--- Data Source-->
 <dataSource name="nameOfDataSource">
     <argument name="dataProvider" xsi:type="configurableObject">

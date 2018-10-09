@@ -1,0 +1,5 @@
+++------------- https://magently.com/blog/magento-2-backend-configuration-frontend-model-part-33/ +++
+Source Model : \Magento\Framework\Option\ArrayInterface it's implements \Magento\Framework\Data\OptionSourceInterface
+Frontend Model : \Magento\Config\
+Block\System\Config\Form\Field
+Backend Model : Magento\Framework\App\Config\Value

@@ -101,4 +101,10 @@ class Data extends AbstractHelper
 	public function getPracticeUrl(){
 		return $this->_urlBuilder->getUrl('practice/index/index');
 	}
+	public function createLog($filename,$value){
+		$writer = new \Zend\Log\Writer\Stream(BP . '/var/log/'.$filename);
+		$logger = new \Zend\Log\Logger();
+		$logger->addWriter($writer);
+		$logger->info($value);
+	}
 }
