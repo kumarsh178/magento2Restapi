@@ -35,4 +35,8 @@ http://vinaikopp.com/2017/02/18/magento2_repositories_interfaces_and_webapi/
 http://techjeffyu.com/blog/magento-2-creating-new-eav-entity-and-model
 +++----------+++--Create new product type +++-----------
 https://www.classyllama.com/blog/custom-product-types-magento-2
-++------------
+++------------++++++++++++
+------------++backend development+++++++++++++
+https://devdocs.magento.com/guides/v2.2/extension-dev-guide/bk-extension-dev-guide.html
+-----+++++++++++++magento2 exam tips ------------++++++++++
+https://absolutecommerce.co.uk/certifications/magento2-certified-professional-developer-examination
