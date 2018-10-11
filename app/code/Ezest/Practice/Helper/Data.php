@@ -9,12 +9,13 @@ class Data extends AbstractHelper
 	protected $_transportBuilder;
 	protected $_practiceModel;
 	protected $_practiceFactory;
-	public function __construct(\Magento\Store\Model\StoreManagerInterface $storeManager,\Magento\Framework\Translate\Inline\StateInterface $inlineTranslation,\Magento\Framework\Mail\Template\TransportBuilder $transportBuilder,\Ezest\Practice\Model\Practice $practiceModel,\Ezest\Practice\Model\PracticeFactory $practicefactory){
+	public function __construct(\Magento\Store\Model\StoreManagerInterface $storeManager,\Magento\Framework\Translate\Inline\StateInterface $inlineTranslation,\Magento\Framework\Mail\Template\TransportBuilder $transportBuilder,\Ezest\Practice\Model\Practice $practiceModel,\Ezest\Practice\Model\PracticeFactory $practicefactory,\Magento\Framework\App\Helper\Context $context){
 		$this->_storeManager = $storeManager;
 		$this->_inlineTranslation = $inlineTranslation;
 		$this->_transportBuilder = $transportBuilder;
 		$this->_practiceModel = $practiceModel;
 		$this->_practiceFactory = $practicefactory;
+		parent::__construct($context);
 	}
 	private $_messages=array(
 		'success'=>array(
@@ -96,5 +97,14 @@ class Data extends AbstractHelper
 	public function getLocations(){
 		$collection = $this->_practiceFactory->create()->getCollection()->addFieldToSelect('location')->getData();
 		return array_unique(array_column($collection, 'location'));
+	}
+	public function getPracticeUrl(){
+		return $this->_urlBuilder->getUrl('practice/index/index');
+	}
+	public function createLog($filename,$value){
+		$writer = new \Zend\Log\Writer\Stream(BP . '/var/log/'.$filename);
+		$logger = new \Zend\Log\Logger();
+		$logger->addWriter($writer);
+		$logger->info($value);
 	}
 }

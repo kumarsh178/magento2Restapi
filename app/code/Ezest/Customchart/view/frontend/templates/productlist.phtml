@@ -1,0 +1,15 @@
+<?php
+echo 'heloopppppppppp';
+//$productCollection = $block->getProductCollection();
+$simpleProductCollection = $block->getSimpleProducts();
+foreach ($simpleProductCollection as $product) {
+	echo '<pre>';
+    print_r($product->getData());     
+    echo "<br>";
+}
+try{
+	$block->createCategory();
+	echo 'category has been created';
+}catch(\Exception $e){
+	echo $e->getMessage();
+}

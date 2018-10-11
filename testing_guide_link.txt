@@ -35,7 +35,24 @@ http://vinaikopp.com/2017/02/18/magento2_repositories_interfaces_and_webapi/
 http://techjeffyu.com/blog/magento-2-creating-new-eav-entity-and-model
 +++----------+++--Create new product type +++-----------
 https://www.classyllama.com/blog/custom-product-types-magento-2
+<<<<<<< HEAD
 ++----------for creating admin user programmaticaly++++++++
 https://magento.stackexchange.com/questions/227713/how-to-create-magento-2-admin-user-from-the-root-folder
 +++-------- ceate user role ++++++++++++
 https://webkul.com/blog/magento-2-how-to-create-user-role-programmatically-by-custom-module-installer/
+=======
+++------------++++++++++++
+------------++backend development+++++++++++++
+https://devdocs.magento.com/guides/v2.2/extension-dev-guide/bk-extension-dev-guide.html
+
+-----+++++++++++++magento2 exam tips ------------++++++++++
+https://absolutecommerce.co.uk/certifications/magento2-certified-professional-developer-examination
+>>>>>>> 6eb6dfdc273cd2e5d8f6223678cb4e120e15b683
+---++++++++++For creating new group -----++++
+https://magento.stackexchange.com/questions/129936/add-category-attribute-to-custom-attribute-group
+--- +++++++ Setup Script ++------
+https://www.mageplaza.com/magento-2-module-development/magento-2-how-to-create-sql-setup-script.html
+---+++++ Add image attribute in category +++
+https://webkul.com/blog/add-custom-image-attribute-category-magento-2/
+++++- quote related questions +++++++++++
+https://www.mageplaza.com/devdocs/how-convert-custom-field-from-quote-item-to-order-item-magento-2.html

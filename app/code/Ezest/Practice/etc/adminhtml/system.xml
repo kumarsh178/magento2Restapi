@@ -24,6 +24,39 @@
                 <field id="display_text" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="0">
                     <label>Display Text</label>
                     <comment>This text will display on the frontend.</comment>
+                    <validate>validate-email</validate>
+                    <depends>
+                        <field id="practice_section/general/enable">1</field>
+                    </depends>
+                </field>
+            </group>
+            <group id="test_backend" 
+            translate="label" 
+            type="text" 
+            sortOrder="1" 
+            showInDefault="1" 
+            showInWebsite="1" 
+            showInStore="1">
+                <label>Backend model test</label>
+                <field id="custom_backend_model" 
+                    translate="label" 
+                    type="text" 
+                    sortOrder="1" 
+                    showInDefault="1" 
+                    showInWebsite="1" 
+                    showInStore="1">
+                    <label>Custom backend model</label>
+                    <backend_model>Ezest\Practice\Model\Config\Backend\Custom</backend_model>
+                </field>
+                <field id="custom_select" 
+                    translate="label" 
+                    type="select" 
+                    sortOrder="2" 
+                    showInDefault="1" 
+                    showInWebsite="1" 
+                    showInStore="1">
+                    <label>Custom source model</label>
+                    <source_model>Ezest\Practice\Model\Config\Source\Custom</source_model>
                 </field>
             </group>
         </section>
@@ -37,10 +70,41 @@
         	<resource>Ezest_Practice::config_practice</resource>
         	<group id="general" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1"> 
 	        	<label>General Configuration</label>
+                <field id="enable" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Module Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                     <depends>
+                        <field id="practice_section/general/enable">1</field>
+                    </depends>
+                </field>
 	        	<field id="display_text2" translate="label" type="text" sortOrder="1" showInStore="1" showInDefault="1" showInWebsite="1">
 	        		<label>Title</label>
 	        	</field>
+                <field id="test_field" translate="label" type="text" sortOrder="1" showInStore="1" showInDefault="1" showInWebsite="1">
+                    <label>Test title</label>
+                    <depends>
+                        <field id="practice_section/general/enable">1</field>
+                    </depends>
+                </field>
         	</group>
+        <!-- <group id="test_frontend" 
+            translate="label" 
+            sortOrder="1" 
+            showInDefault="1" 
+            showInWebsite="1" 
+            showInStore="1">
+                <label>Frontend model</label>
+                    <field id="navigation_links" 
+                        translate="label" 
+                        sortOrder="4" 
+                        showInDefault="1" 
+                        showInWebsite="1" 
+                        showInStore="1">
+                    <label>Custom links in navigation</label>
+                    <frontend_model>Ezest\Practice\Block\Adminhtml\Form\Field\Navigation</frontend_model>
+                    <backend_model>Magento\Config\Model\Config\Backend\Serialized\ArraySerialized</backend_model>
+                </field>
+            </group> -->
         </section>
     </system>
 </config>

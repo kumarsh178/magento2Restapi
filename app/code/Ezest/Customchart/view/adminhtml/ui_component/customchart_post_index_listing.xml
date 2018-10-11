@@ -32,6 +32,19 @@
                         </item>
                     </argument>
                 </action>
+               <action name="save">
+                    <argument name="data" xsi:type="array">
+                        <item name="config" xsi:type="array">
+                            <item name="type" xsi:type="string">save</item>
+                            <item name="label" xsi:type="string" translate="true">Save</item>
+                            <item name="url" xsi:type="url" path="customchart/post/save"/>
+                            <item name="confirm" xsi:type="array">
+                                <item name="title" xsi:type="string" translate="true">Save Post</item>
+                                <item name="message" xsi:type="string" translate="true">Are you sure you wan't to delete selected items?</item>
+                            </item>
+                        </item>
+                    </argument>
+                </action>
             </massaction>
             <!-- ... For Pagination -->  
             <paging name="listing_paging"/>
@@ -40,7 +53,7 @@
             <!-- ... For searching full text -->    
     <filterSearch name="fulltext"/>
     </listingToolbar>
-    <argument name="data" xsi:type="array">
+<!--     <argument name="data" xsi:type="array">
         <item name="js_config" xsi:type="array">
             <item name="provider" xsi:type="string">customchart_post_index_listing.ezest_customchart_post_listing_datasource</item>
             <item name="deps" xsi:type="string">customchart_post_index_listing.ezest_customchart_post_listing_datasource</item>
@@ -51,10 +64,10 @@
                 <item name="name" xsi:type="string">add</item>
                 <item name="label" xsi:type="string" translate="true">Add New Post</item>
                 <item name="class" xsi:type="string">primary</item>
-                <item name="url" xsi:type="string">*/*/new</item>
+                <item name="url" xsi:type="string">*/*/create</item>
             </item>
         </item>
-    </argument>
+    </argument> -->
 <!--- Data Source-->
 <dataSource name="nameOfDataSource">
     <argument name="dataProvider" xsi:type="configurableObject">
@@ -136,5 +149,10 @@
                 </item>
             </argument>
         </column>
+         <actionsColumn name="actions" class="Ezest\Customchart\Ui\Component\Listing\Columns\PostAction" sortOrder="200">
+            <settings>
+                <indexField>post_id</indexField>
+            </settings>
+        </actionsColumn>
 </columns>
 </listing>

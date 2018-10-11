@@ -1,2 +1,22 @@
 <?php
-echo 'Heloo Test';
+echo 'Heloo Test js';
+
+?>
+<div id="test">
+	
+</div>
+<script>
+	/** js/testtheme : In theme web folder
+	testlib : root lib/web folder
+	Ezest_Customchart/js/functions : in the module there is web folder in view js/file.js
+	**/
+	/*require(['Ezest_Customchart/js/functions','jquery','testlib','js/testtheme'] ,function(){
+			console.log('add opration : ' + add(10,30));
+			console.log('Sub opration :'+ sub(30,10));
+			console.log('Devide opration :'+ devide(50,10));
+			jQuery('#test').text('hello div test');
+	});*/
+	require(['module'],function(m){
+		console.log(m.add(10,30));
+	});
+</script>

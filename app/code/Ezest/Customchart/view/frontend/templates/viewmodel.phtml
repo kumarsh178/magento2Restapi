@@ -1,0 +1,9 @@
+<?php
+$viewModel = $block->getData('viewModel');
+//echo get_class($viewModel);
+//echo $viewModel->getItems();
+$collection = $viewModel->_postFactory->create();
+
+echo '<pre>';
+print_r($collection->getCollection()->getData());
+?>

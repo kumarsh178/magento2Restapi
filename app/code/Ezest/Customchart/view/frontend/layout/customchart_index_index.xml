@@ -1,15 +1,29 @@
 <?xml version="1.0"?>
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <referenceContainer name="content">
-         <container name="firstDiv" htmlTag="div" htmlClass="firstDiv" label="first Div">
+         <!-- <container name="firstDiv" htmlTag="div" htmlClass="firstDiv" label="first Div">
          	<block class="Magento\Cms\Block\Block" name="test-content">
 			    <arguments>
 			        <argument name="block_id" xsi:type="string">test-content</argument>
 			    </arguments>
 			</block>
-         </container>
-        <container name="test" as="test_div" htmlTag="div" after="firstDiv" htmlClass="test_div" label="Sidebar Additional">
+         </container> 
+      <container name="test" as="test_div" htmlTag="div" after="firstDiv" htmlClass="test_div" label="Sidebar Additional">
         		<block class="Ezest\Practice\Block\Widget\Post" name="practice_index_index"/>
-    	</container>
+    	</container>-->
+       <!--  <block class="Magento\Framework\View\Element\Template"
+                   name="pronko.viewmodel" template="Ezest_Customchart::viewmodel.phtml">
+                  <arguments>
+                    <argument name="viewModel" xsi:type="object">Ezest\Customchart\ViewModel\CustomBlock</argument>
+                  </arguments>
+        </block> -->
+        <block class="Magento\Framework\View\Element\Template" template="Ezest_Customchart::index.phtml"/>
+        <container name="test" as="test_div" htmlTag="div" after="firstDiv" htmlClass="test_div" label="Sidebar Additional">
+            <block class="Magento\Framework\View\Element\Text" name="showText">
+                <arguments>
+                    <argument name="text" xsi:type="string">About Us</argument>
+                </arguments>
+            </block>
+      </container>
     </referenceContainer>
 </page>
