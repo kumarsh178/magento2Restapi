@@ -56,3 +56,7 @@ https://www.mageplaza.com/magento-2-module-development/magento-2-how-to-create-s
 https://webkul.com/blog/add-custom-image-attribute-category-magento-2/
 ++++- quote related questions +++++++++++
 https://www.mageplaza.com/devdocs/how-convert-custom-field-from-quote-item-to-order-item-magento-2.html
+++-----------+++ create extension attribute --++++++++++++
+https://store.fooman.co.nz/blog/an-introduction-to-extension-attributes.html
+https://www.interactiv4.com/e-commerce-en/extension-attributes-codehacks-i4/?lang=en
+http://techjeffyu.com/blog/magento-2-using-extension-attributes-on-products
