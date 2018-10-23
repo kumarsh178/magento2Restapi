@@ -1,0 +1,33 @@
+# create  a shipping method:
+
+Step1->class extends with \Magento\Shipping\Model\Carrier\AbstractCarrier and implements \Magento\Shipping\Model\Carrier\CarrierInterface
+
+Step2->create a object of \Magento\Shipping\Model\Rate\Result
+
+and create a object of \Magento\Quote\Model\Quote\Address\RateResult\MethodFactory
+and setCarrierCode,setCarrierTile,setMethod,setMethodTitle,setPrice,setCost value will be asign same to setCost and setPrice
+
+method object of rate\Result function and return it into collectRates function 
+
+Error Type
+SHOrt code => BUFNMNI
+ 400 => Magento\Framework\Webapi\Exception::HTTP_BAD_REQUEST
+ 401 =>HTTP_UNAUTHORIZED
+ 403 =>HTTP_FORBIDDEN
+ 404 =>HTTP_NOT_FOUND
+ 405 =>HTTP_METHOD_NOT_ALLOWED
+ 406=>HTTP_NOT_ACCEPTABLE
+ 500=>HTTP_INTERNAL_ERROR
+									
+#
+https://www.classyllama.com/blog/how-to-create-payment-method-magento-2
+create a payment method 
+payment method push in this class with push function Magento_Checkout/js/model/payment/renderer-list
+
+All payement method extends this "\Magento\Payment\Model\Method\AbstractMethod" model class
+Magento\Quote\Api\Data\PaymentMethodInterface
+
+There are two available types of payment tokens:
+\Magento\Vault\Api\Data\PaymentTokenFactoryInterface::TOKEN_TYPE_CREDIT_CARD is used for credit cards
+\Magento\Vault\Api\Data\PaymentTokenFactoryInterface::TOKEN_TYPE_ACCOUNT is used for payment accounts like PayPal
+https://devdocs.magento.com/guides/v2.2/payments-integrations/base-integration/payment-option-config.html

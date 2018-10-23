@@ -60,3 +60,10 @@ https://www.mageplaza.com/devdocs/how-convert-custom-field-from-quote-item-to-or
 https://store.fooman.co.nz/blog/an-introduction-to-extension-attributes.html
 https://www.interactiv4.com/e-commerce-en/extension-attributes-codehacks-i4/?lang=en
 http://techjeffyu.com/blog/magento-2-using-extension-attributes-on-products
+++----------+++++++++custom fee add -----------++++++++++++++
+https://webkul.com/blog/add-custom-pricefee-order-total-magento2/
+https://webkul.com/blog/display-custom-price-fee-checkout-cart-summary-total-magento2/
+++-------Checkout guide link+++-----
+https://devdocs.magento.com/guides/v2.2/howdoi/checkout/checkout_customize.html
++++----++++ convert quote to address --+++++
+https://magento.stackexchange.com/questions/126036/how-to-add-custom-checkout-fields-and-save-them-in-db
