@@ -3,3 +3,25 @@ Source Model : \Magento\Framework\Option\ArrayInterface it's implements \Magento
 Frontend Model : \Magento\Config\
 Block\System\Config\Form\Field
 Backend Model : Magento\Framework\App\Config\Value
+
+--------++++++++++++Block class +++++++--------------
+Frontend Block extends class => \Magento\Framework\View\Element\Template and parent of it \Magento\Framework\View\Element\AbstratBlock
+interface => Magento\Framework\View\Element\BlockInterface
+Backend block extends class => \Magento\Backend\Block\Template it is subset of \Magento\Framework\View\Element\Template
+++---- extensin_attributes.xml+++++++++
+For implements extension attribute then model must extend Magento\Framework\Model\AbstractExtensibleModel class
+++-----++---------fcade---+
+Payment method facade. Payment facade it is an instance of Payment Adapter configured with virtual types and allows to process payment actions between Magento Sales Management and payment processor. Add the dependency injection (DI) configuration for payment method facade in your %Vendor_Module%/etc/di.xml .
+++-----++++Upgrade Magento +++---
+https://www.mageplaza.com/devdocs/upgrade-magento-2.html
+Step 1: Backup your store
+Step 2: Turn on maintenance mode
+Step 3: Upgrade to Magento 2
+Step 3.1 Pull package
+Step 3.2 Flush cache
+Step 3.3 Run Upgrade Magento
+Step 3.4 Run complie, reindex
+Step 3.5 Disable maintenance mode
+Step 4: Check the current Magento 2’s version
+Q: I cannot access to frontend after ugprading?
+check the permission

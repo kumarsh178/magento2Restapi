@@ -31,3 +31,4 @@ There are two available types of payment tokens:
 \Magento\Vault\Api\Data\PaymentTokenFactoryInterface::TOKEN_TYPE_CREDIT_CARD is used for credit cards
 \Magento\Vault\Api\Data\PaymentTokenFactoryInterface::TOKEN_TYPE_ACCOUNT is used for payment accounts like PayPal
 https://devdocs.magento.com/guides/v2.2/payments-integrations/base-integration/payment-option-config.html
+https://www.mageplaza.com/kb/how-to-configure-store-urls-magento-2.html
